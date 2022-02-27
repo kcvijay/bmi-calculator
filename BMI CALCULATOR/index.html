@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styling.css" />
+    <title>BMI CALCULATOR</title>
+  </head>
+  <body>
+    <div class="heading">
+      <h1>BMI CALCULATOR</h1>
+    </div>
+    <div class="input">
+            <div class="box">
+                <label for="weight" id="weight--label">Weight (in kg):</label>
+                <input type="number" id="weight" /><br>
+            </div>
+
+        <div class="box">
+
+                <label for="height" id="height--label">Height (in cm):</label>
+                <input type="number" id="height" /><br>
+
+        </div>
+
+        <button type="submit" id="reset">RESET</button><button type="submit" id="calcBmi">CALCULATE</button>
+    </div>
+
+    <div class="result--label"><span id="result"></span></p></div>
+    <div class="notes">
+      <p>BMI is an abbreviation of Body Mass Index, which finds whether a person's body-weight healthy or not by calculating weight to height ratio.<br></p>
+        <p><b>If BMI is between:<br>
+        15 - 19: Underweight<br />
+        19 - 25: Normal<br />
+        25 - 30: Mildly Overweight<br />
+        30 and above: Critically Overweight
+        </b></p>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>
