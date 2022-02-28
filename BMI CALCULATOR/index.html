@@ -12,16 +12,32 @@
       <h1>BMI CALCULATOR</h1>
     </div>
     <div class="input">
-            <div class="box">
+
+      <div class="imp--metric">
+        <button  id="imperial">FEET & INCH</button>
+        <button  id="metric">CENTIMETRE</button>
+  </div> 
+
+        <div class="weight--box">
                 <label for="weight" id="weight--label">Weight (in kg):</label>
                 <input type="number" id="weight" /><br>
+        </div>
+
+        
+
+        <div class="input--2">
+            <div class="box--1">
+              <label for="height" id="height--label">Height (in cm):</label>
+              <input type="number" id="height" /><br>
             </div>
 
-        <div class="box">
-
-                <label for="height" id="height--label">Height (in cm):</label>
-                <input type="number" id="height" /><br>
-
+            <div class="box--2">
+              <label for="feet" id="feet--label">Feet:</label>
+              <input type="number" id="feet" /><br>
+    
+              <label for="inch" id="inch--label">Inch:</label>
+              <input type="number" id="inch" /><br>
+            </div>
         </div>
 
         <button type="submit" id="reset">RESET</button><button type="submit" id="calcBmi">CALCULATE</button>
@@ -40,3 +56,4 @@
     <script src="/script.js"></script>
   </body>
 </html>
+
