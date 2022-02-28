@@ -37,6 +37,14 @@ btnMetric.addEventListener("click", function () {
   resultText.textContent = "";
 });
 
+btnReset.addEventListener("click", function () {
+  document.getElementById("height").value = "";
+  document.getElementById("weight").value = "";
+  document.getElementById("feet").value = "";
+  document.getElementById("inch").value = "";
+  document.getElementById("result").textContent = "";
+});
+
 btnImperial.addEventListener("click", function () {
   document.getElementById("calcBmi").addEventListener("click", function () {
     let inputWeight = Number(document.getElementById("weight").value);
@@ -48,8 +56,7 @@ btnImperial.addEventListener("click", function () {
       inputWeight /
       ((inputFeet * 0.3048 + inputInch * 0.0254) *
         (inputFeet * 0.3048 + inputInch * 0.0254));
-
-    console.log(bmiImperial);
+    if (inputWeight > 0 && inputFeet > 0 && inputInch > 0) {
     if (bmiImperial > 15 && bmiImperial < 19) {
       resultText.textContent = `Your BMI is ${bmiImperial.toFixed(
         1
@@ -69,6 +76,7 @@ btnImperial.addEventListener("click", function () {
     } else {
       resultText.textContent = `Data input invalid.`;
     }
+    }
   });
 });
 
@@ -81,6 +89,7 @@ btnMetric.addEventListener("click", function () {
 
     let bmi = inputWeight / (((inputHeight / 100) * inputHeight) / 100);
 
+    if (inputWeight > 0 && inputHeight > 0) {
     if (bmi > 15 && bmi < 19) {
       resultText.textContent = `Your BMI is ${bmi.toFixed(1)} and underweight.`;
     } else if (bmi > 19 && bmi < 25) {
@@ -96,13 +105,7 @@ btnMetric.addEventListener("click", function () {
     } else {
       resultText.textContent = `Data input invalid.`;
     }
+    }
   });
 });
 
-btnReset.addEventListener("click", function () {
-  document.getElementById("height").value = "";
-  document.getElementById("weight").value = "";
-  document.getElementById("feet").value = "";
-  idocument.getElementById("inch").value = "";
-  document.getElementById("result").textContent = "";
-});
